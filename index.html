@@ -6,17 +6,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn Morse Code</title>
 
-    <link rel="stylesheet" href="./style/key.css">
+    <link rel="shortcut icon" type='image/ico' href="./assets/icons/headphone-icon.png" />
+
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/playback.css">
+    <link rel="stylesheet" href="./style/main.css">
 
     <script src="https://unpkg.com/tone@13.8.25/build/Tone.js"></script>
     <script type='application/javascript' src="./dist/main.js"></script>
 
 </head>
 <body>
-    <h1>Learn Morse Code</h1>
-    <main>
-        <div class='key'></div>
+        <header class="header">
+            <div class="header-left">
+                <p>Learn Morse Code</p>
+            </div>
 
-    </main>
+            <div class="header-right">
+                <a href="http://spenceriascone.com/">Spencer Iascone</a>
+                <div class=links>
+                    <a class='linkedIn' href="https://www.linkedin.com/in/spencer-iascone-56b28b62"></a>
+                    <a class='angelList' href="https://angel.co/spencer-iascone"></a>
+                    <a class='github' href="https://github.com/siascone"></a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class='code-and-translator'>
+                <div class='chart-instructions'>
+                    <div class='code-chart'>
+                        <p>Code chart</p>
+                    </div>
+                    <div class='instructions'>
+                        <h1>Instructions</h1>
+                        <p>Morse Code represents letter and number characters into collections of dits and dahs:</p>
+                        <ul>
+                            <li>The dit is a single unit of length.</li>
+                            <li>The dah is equal to 3 dits.</li>
+                            <li>The space between the dits and dahs within a character is equal to one dit.</li>
+                            <li>The space between characters varies with speed but is generally equal to one dah.</li>
+                        </ul>
+
+                        <p>To use "Learn Morse Code":</p>
+
+                        <ul>
+                            <li>Click on a letter to hear the code.</li>
+                            <li>Press the spacebar to tap out dits and dahs.</li>
+                            <li>Enter text into the translator to translate a message into Morse Code.</li>
+                            <li>Press the Play Translation button to hear your message in Morse Code.</li>
+                            <li>Practice tapping along.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class='translator'>
+                    <div class="text-input">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Enter text to be translated into Morse Code"></textarea>
+                    </div>
+                    <div class="translation">
+                        <p>Morse code translations will display here</p>
+                    </div>
+                </div>
+            </div>
+            <div class='playback'>
+                <div class='key'>
+                    <p>Press the spacebar to tap out code</p>
+                </div>
+                <div class='play'>
+                    <p>Play Translation</p>
+                </div>
+            </div>
+        </main>
+
+
+        <!-- <footer class='footer'>
+            Soem footer stuff will go here...
+        </footer> -->
 </body>
 </html>
