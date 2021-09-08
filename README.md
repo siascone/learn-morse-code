@@ -26,7 +26,7 @@ With "Learn More Code" users will be able to:
 
 ## Future Features and Improvements
 - Integrate user input with playback and display successful and unsuccessful user code along
-- - provide score/proficiency data 
+  - provide score/proficiency data 
 
 
 
