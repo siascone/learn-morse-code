@@ -21,17 +21,18 @@ class Translation {
             let text = this.textarea.value.split('');
             this.transCode = ''
             text.forEach(char => {
-                debugger;
+                // debugger;
                 if (this.code[char.toLowerCase()]) {
-                    debugger
-                    this.transCode = this.transCode + this.code[char.toLowerCase()];
+                    // debugger
+                    this.transCode = this.transCode + this.code[char.toLowerCase()] + ' ';
                 }
             })
 
-            let trans = document.createElement('div');
-            trans.innerText = this.transCode;
+            // let trans = document.createElement('div');
+            // trans.innerText = this.transCode;
             // debugger
-            this.translation.append(trans);
+            // this.translation.append(trans);
+            this.translation.innerText = this.transCode;
 
         })
     }
