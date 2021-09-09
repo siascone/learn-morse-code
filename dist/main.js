@@ -10230,6 +10230,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./scripts/constants.js":
+/*!******************************!*\
+  !*** ./scripts/constants.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"code\": () => (/* binding */ code)\n/* harmony export */ });\nconst code = {\n    a: 'test',\n    b: 'test',\n    c: 'test',\n    d: 'test',\n    e: 'test',\n    f: 'test',\n    g: 'test',\n    h: 'test',\n    i: 'test',\n    j: 'test',\n    k: 'test',\n    l: 'test',\n    m: 'test',\n    n: 'test',\n    o: 'test',\n    p: 'test',\n    q: 'test',\n    r: 'test',\n    s: 'test',\n    t: 'test',\n    u: 'test',\n    v: 'test',\n    w: 'test',\n    x: 'test',\n    y: 'test',\n    z: 'test',\n    1: 'test',\n    2: 'test',\n    3: 'test',\n    4: 'test',\n    5: 'test',\n    6: 'test',\n    7: 'test',\n    8: 'test',\n    9: 'test',\n    0: 'test'\n}\n\n//# sourceURL=webpack:///./scripts/constants.js?");
+
+/***/ }),
+
 /***/ "./scripts/key.js":
 /*!************************!*\
   !*** ./scripts/key.js ***!
@@ -10241,6 +10252,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./scripts/translation.js":
+/*!********************************!*\
+  !*** ./scripts/translation.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constants */ \"./scripts/constants.js\");\n\n\nclass Translation {\n    constructor() {\n        this.textarea = document.querySelector('textarea');\n        this.translation = document.querySelector('.translation')\n        this.code = _constants__WEBPACK_IMPORTED_MODULE_0__.code;\n        this.transCode = '';\n\n        this.translate.bind(this);\n\n        this.translate();\n    }\n\n    translate() {\n\n        /// TODO fix translator\n        \n        this.textarea.addEventListener('change', () => {\n            // debugger\n            let text = this.textarea.value.split('');\n            this.transCode = ''\n            text.forEach(char => {\n                debugger;\n                if (this.code[char.toLowerCase()]) {\n                    debugger\n                    this.transCode = this.transCode + this.code[char.toLowerCase()];\n                }\n            })\n\n            let trans = document.createElement('div');\n            trans.innerText = this.transCode;\n            // debugger\n            this.translation.append(trans);\n\n        })\n    }\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Translation);\n\n//# sourceURL=webpack:///./scripts/translation.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -10248,7 +10270,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scripts_key__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scripts/key */ \"./scripts/key.js\");\n// import * as Tone from 'tone';\n\n\ndocument.addEventListener('DOMContentLoaded', () => {\n    new _scripts_key__WEBPACK_IMPORTED_MODULE_0__.default();\n})\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scripts_translation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scripts/translation */ \"./scripts/translation.js\");\n/* harmony import */ var _scripts_key__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../scripts/key */ \"./scripts/key.js\");\n// import * as Tone from 'tone';\n\n\n\ndocument.addEventListener('DOMContentLoaded', () => {\n    new _scripts_key__WEBPACK_IMPORTED_MODULE_1__.default();\n    new _scripts_translation__WEBPACK_IMPORTED_MODULE_0__.default();\n})\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 

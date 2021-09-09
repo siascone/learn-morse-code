@@ -129,6 +129,7 @@ main {
 .instructions {
     margin-left: 5px;
     flex-direction: column;
+    overflow: scroll;
     /* align-content: center; */
     /* align-content: space-between; */
     /* margin-right: 5px; */
