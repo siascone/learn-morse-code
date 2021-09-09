@@ -24,7 +24,7 @@ class Translation {
                 // debugger;
                 if (this.code[char.toLowerCase()]) {
                     // debugger
-                    this.transCode = this.transCode + this.code[char.toLowerCase()] + ' ';
+                    this.transCode = this.transCode + this.code[char.toLowerCase()] + '    ';
                 }
             })
 

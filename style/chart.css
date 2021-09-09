@@ -1,0 +1,22 @@
+.code-letters, .code-numbers {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.code-char {
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    border: solid 1px black;
+    width: 60px;
+    height: 60px;
+    padding-top: 5px;
+    margin: 3px;
+    text-align: center;
+}
+
+.code-letters {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid black;
+}
