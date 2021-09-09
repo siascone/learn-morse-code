@@ -14,7 +14,7 @@ class ChartPlayback {
 
     async play(duration) {
         await Tone.start();
-        await this.synth.triggerAttackRelease('C4', duration);
+        this.synth.triggerAttackRelease('C4', duration);
     }
 
     playback() {
@@ -27,9 +27,9 @@ class ChartPlayback {
                 
                 code.innerHTML.split(' ').forEach(async char => {
                     if (char === '.') {
-                        this.play('8n');
+                        await this.play('8n');
                     } else if (char === '_') {
-                        this.play('2n'), 100;
+                        this.play('2n');
                     }
                 })
             });
