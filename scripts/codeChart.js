@@ -27,6 +27,8 @@ class CodeChart {
             let code = document.createElement('p')
 
             character.classList.add('code-char');
+            code.classList.add('code-chart-code');
+
             char.innerText = letter;
             code.innerText = this.code[letter.toLowerCase()]
 
@@ -44,6 +46,7 @@ class CodeChart {
             let code = document.createElement('p');
 
             numChar.classList.add('code-char');
+            code.classList.add('code-chart-code');
             num.innerText = number;
             code.innerText = this.code[number];
 
